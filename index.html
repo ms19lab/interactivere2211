@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Matthew Slade — Interactive Resume</title>
 
-  <!-- Palette: black, blue, white -->
+
   <style>
     :root {
       --clr-bg: #000;         /* black */
@@ -15,21 +15,21 @@
       --clr-card: #111827;    /* dark gray card */
     }
 
-    /* RESET */
+
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 
-    /* Global fade‑in */
+
     body{
       font-family:Arial,Helvetica,sans-serif;
       background:var(--clr-bg);
       color:var(--clr-text);
-      overflow:hidden;      /* stop body scroll; pages scroll internally */
+      overflow:hidden;      
       opacity:0;
       animation:pageFade .7s forwards ease;
     }
     @keyframes pageFade{to{opacity:1}}
 
-    /* HEADER */
+
     header{
       display:flex;justify-content:space-between;align-items:center;
       padding:1rem 2rem;
@@ -44,7 +44,7 @@
     }
     nav a:hover,nav a.active{background:var(--clr-accent);color:var(--clr-bg);}
 
-    /* MAIN WRAPPER */
+
     main{height:calc(100vh - 66px);display:flex;justify-content:center;align-items:flex-start;}
 
     .page{
@@ -53,7 +53,7 @@
     }
     .page.active{display:block;opacity:1;}
 
-    /* HERO (Home) */
+
     .hero{display:flex;flex-direction:column;align-items:center;text-align:center;gap:1rem;}
     .profile-pic{
       width:170px;height:170px;border-radius:50%;object-fit:cover;
@@ -76,7 +76,7 @@
     .hero-icons img.icon{width:32px;height:32px;filter:invert(1);transition:opacity .2s;}
     .hero-icons img.icon:hover{opacity:.7;}
 
-    /* SECTIONS */
+
     h2{color:var(--clr-accent);margin-bottom:1rem;}
     h3{margin:1rem 0 .25rem;}
     em{font-style:normal;color:var(--clr-muted);font-size:.85rem;}
@@ -85,7 +85,7 @@
 
     .project-img{width:100%;max-width:420px;border:2px solid var(--clr-accent);margin:.5rem 0 1rem;border-radius:6px;object-fit:cover;}
 
-    /* EXPERIENCE TABS */
+
     .exp-wrapper{
       background:var(--clr-card);
       border-radius:12px;
@@ -112,20 +112,20 @@
     .exp-pane{display:none;opacity:0;transition:opacity .3s ease;}
     .exp-pane.active{display:block;opacity:1;}
 
-    /* Summary layout */
+
     .summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-top:2rem;font-size:.9rem;}
     .summary-grid span{display:block;color:var(--clr-muted);font-size:.8rem;margin-bottom:.25rem;}
 
-    /* Resume download outside card */
+
     .resume-download{text-align:center;margin-top:2rem;}
 
   </style>
 </head>
 <body>
 
-  <!-- HEADER -->
+
   <header>
-    <h1>interactive resume</h1> <!-- text changed -->
+    <h1>Interactive Resume</h1> 
     <nav>
       <a href="#" data-page="home" class="active">Home</a>
       <a href="#" data-page="experience">Experience</a>
@@ -136,9 +136,9 @@
     </nav>
   </header>
 
-  <!-- PAGES -->
+
   <main>
-    <!-- HOME / HERO -->
+
     <section id="home" class="page active">
       <div class="hero">
         <img src="profile.png" alt="Matthew Slade portrait" class="profile-pic"/>
@@ -155,13 +155,13 @@
 
         <div class="hero-icons">
           <a href="mailto:mslade191@gmail.com" aria-label="Email">✉️</a>
-          <a href="https://github.com/yourgithub" target="_blank" aria-label="GitHub"><img src="github.png" alt="GitHub" class="icon"></a>
+          <a href="https://github.com/ms19lab" target="_blank" aria-label="GitHub"><img src="github.png" alt="GitHub" class="icon"></a>
           <a href="https://linkedin.com/in/mslade04" target="_blank" aria-label="LinkedIn"><img src="linked.png" alt="LinkedIn" class="icon"></a>
         </div>
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
+
     <section id="experience" class="page">
       <h2>Profile &amp; History</h2>
       <div class="exp-wrapper">
@@ -171,7 +171,7 @@
           <button class="tab-btn" data-exp="edu">Education</button>
         </div>
 
-        <!-- SUMMARY -->
+
         <div id="summary" class="exp-pane active">
           <p>As a driven senior at <strong>Florida State University</strong> dual‑majoring in <strong>Finance</strong> and <strong>Information Technology</strong>, I leverage data analytics and programming to uncover investment insights and optimize business processes. My curiosity for markets and technology fuels an ambition to build products that deliver measurable value.</p>
 
@@ -195,7 +195,7 @@
           </div>
         </div>
 
-        <!-- WORK EXPERIENCE -->
+
         <div id="work" class="exp-pane">
           <h3>Event Worker &amp; Kitchen Expo — Golden Eagle Country Club</h3>
           <em>Jan 2023 – Jun 2023</em>
@@ -212,7 +212,7 @@
           </ul>
         </div>
 
-        <!-- EDUCATION -->
+
         <div id="edu" class="exp-pane">
           <h3>Florida State University — College of Business</h3>
           <em>B.S. Finance, GPA 3.88, Dean’s List (2022‑2025)</em>
@@ -225,13 +225,13 @@
         </div>
       </div>
 
-      <!-- Resume download button placed beneath summary tab card -->
+  
       <div class="resume-download">
         <a href="MatthewSlade_Resume2025.pdf" target="_blank" class="btn primary">Resume PDF</a>
       </div>
     </section>
 
-    <!-- SKILLS -->
+
     <section id="skills" class="page">
       <h2>Skills &amp; Certifications</h2>
       <h3>Certifications</h3>
@@ -249,11 +249,10 @@
       <ul>
         <li>Venture Valley Collegiate Cup – <strong>1st Place</strong> ($2,000 prize)</li>
         <li>Grew personal E*Trade account from $1,000 → $18,000 over five years</li>
-        <li>Treasurer, Chiles High Asian Student Association (3 years)</li>
       </ul>
     </section>
 
-    <!-- PROJECTS -->
+  
     <section id="projects" class="page">
       <h2>Projects</h2>
       <h3><a class="inline" href="#" target="_blank">Google Sheets Delivery Planner &amp; Profitability Monitor</a></h3>
@@ -268,14 +267,14 @@
       </ul>
     </section>
 
-    <!-- GOALS -->
+
     <section id="goals" class="page">
       <h2>Goals</h2>
       <p>I am an aspiring financial technologist who is currently pursuing a dual B.S. in finance and information technology.</p>
       <p>I am eager to combine data analytics, programming and market insights to create next‑gen investment tools. I am seeking a position where I can automate complex workflows, and help promote access to financial intelligence.</p>
     </section>
 
-    <!-- CONTACT -->
+  
     <section id="contact" class="page">
       <h2>Contact</h2>
       <ul>
@@ -287,9 +286,9 @@
     </section>
   </main>
 
-  <!-- ROUTING & TAB LOGIC -->
+
   <script>
-    // PAGE ROUTING
+  
     const navLinks = document.querySelectorAll('nav a');
     const pages    = document.querySelectorAll('.page');
     const heroBtns = document.querySelectorAll('[data-nav]');
@@ -304,7 +303,7 @@
     });
     heroBtns.forEach(btn=>btn.addEventListener('click',()=>show(btn.dataset.nav)));
 
-    // EXPERIENCE TAB SWITCHING
+    
     const tabBtns  = document.querySelectorAll('.tab-btn');
     const panes    = document.querySelectorAll('.exp-pane');
 
